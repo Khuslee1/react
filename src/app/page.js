@@ -26,6 +26,32 @@ const sold = [
   },
 ];
 
+const info = [
+  {
+    img: "/con1.png",
+    head: "Find your dream home for life",
+    pa: "Browse thousands of properties and find the perfect place",
+  },
+  {
+    img: "/con2.png",
+    head: "Pre-Approved Loan $1 to $5",
+    pa: "Get pre-approved quickly and know your budget",
+  },
+  {
+    img: "/con3.png",
+    head: "Commission free for life",
+    pa: "Save thousands with our commission-free model",
+  },
+];
+
+const cata = [
+  { head: "NEED HELP", arr: ["Contact Us", "FAQ", "Support", ""] },
+  { head: "COMPANY", arr: ["About Us", "Careers", "Blog", "Press"] },
+
+  { head: "QUICK LINKS", arr: ["Buy", "Sell", "Rent", "Mortgage"] },
+  { head: "FOLLOW", arr: ["Facebook", "Twitter", "Instagram", "LinkedIn"] },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-col gap-[107px] items-center">
@@ -164,7 +190,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full h-[764px] flex flex-wrap gap-7 justify-center ">
+        <div className="w-7xl h-[764px] flex flex-wrap gap-7 justify-center ">
           <div className="flex flex-col gap-6 w-102 h-[370px] rounded-[14px] border border-[#0000001A] relative">
             <img
               className="w-full h-48 object-cover rounded-t-[14px]"
@@ -419,6 +445,88 @@ export default function Home() {
         </div>
         <div className="bg-[#FF6900] flex justify-center items-center rounded-lg text-white h-9 w-[161.73px] ">
           Meet the team
+        </div>
+      </div>
+      <div className="h-[152px] w-[1064.99px] flex gap-8">
+        {info.map((item, i) => {
+          return (
+            <div
+              key={i}
+              className="h-full w-1/3 flex flex-col gap-2 items-center px-10"
+            >
+              <div className="h-16 w-16 flex items-center justify-center bg-[#101828] rounded-full">
+                <img className="h-8 w-8" src={item.img} />
+              </div>
+              <p className="font-sans text-[16px]">{item.head}</p>
+              <p className="font-sans text-[14px] text-[#4A5565] text-center">
+                {item.pa}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+      <div className="w-full h-[260px] bg-[#101828] flex flex-col py-10 gap-6 items-center">
+        <div className="flex flex-col items-center">
+          <p className="font-sans text-base text-[#FFFFFF]">
+            The Only Market Update
+          </p>
+          <p className="font-sans text-base text-[#FFFFFF]">
+            You'll Actually Want to Read
+          </p>
+        </div>
+        <p className="font-sans text-[16px] text-[#99A1AF] w-[662px] text-center">
+          Get weekly insights on the real estate market, new listings, and
+          expert tips delivered to your inbox
+        </p>
+        <div className="flex gap-3">
+          <div className="w-[305.4px] h-9 px-2 py-1 bg-white rounded-lg border border-[#00000000] font-sans text-[#717182] text-[14px] flex items-center">
+            Enter your email
+          </div>
+          <div className="h-9 w-[130.52px] bg-[#FF6900] flex items-center justify-center text-[14px] text-[#FFFFFF] font-medium rounded-lg">
+            Subscribe
+          </div>
+        </div>
+      </div>
+      <div className="w-full h-[342px] flex flex-col justify-center items-center gap-8">
+        <div className="w-7xl h-40 flex gap-8">
+          {/* <div className="flex flex-col gap-4 w-[296px] h-40">
+            <p className="font-sans text-4">NEED HELP</p>
+            <div className="flex flex-col gap-2">
+              <p className="font-sans text-4 text-[#4A5565]">Contact Us</p>
+              <p className="font-sans text-4 text-[#4A5565]">FAQ</p>
+              <p className="font-sans text-4 text-[#4A5565]">Support</p>
+              <p className="font-sans text-4 text-[#4A5565]"></p>
+            </div>
+          </div> */}
+          {cata.map((item, i) => {
+            return (
+              <div key={i} className="flex flex-col gap-4 w-[296px] h-40">
+                <p className="font-sans text-4">{item.head}</p>
+                <div className="flex flex-col gap-2">
+                  <p className="font-sans text-4 text-[#4A5565]">
+                    {item.arr[0]}
+                  </p>
+                  <p className="font-sans text-4 text-[#4A5565]">
+                    {item.arr[1]}
+                  </p>
+                  <p className="font-sans text-4 text-[#4A5565]">
+                    {item.arr[2]}
+                  </p>
+                  <p className="font-sans text-4 text-[#4A5565]">
+                    {item.arr[3]}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="w-7xl h-[53px] flex justify-between items-center border border-t-[#0000001A] border-white">
+          <p className="font-sans text-[14px] text-[#4A5565]">
+            © 2024 Real Estate Co. All rights reserved.
+          </p>
+          <p className="font-sans text-[14px] text-[#4A5565]">
+            Privacy Policy &nbsp;&nbsp; Terms of Service
+          </p>
         </div>
       </div>
     </div>
