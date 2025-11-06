@@ -1,19 +1,16 @@
 import { First } from "@/_components/FirstComponent";
+import { Butt } from "@/_components/Butt";
+import { Header } from "@/_components/Header";
 
 export const FirstSection = () => {
   return (
-    <div className="h-[590px] w-screen flex flex-col gap-10 py-16 px-16 bg-white items-center">
-      <div className="h-28 w-full flex flex-col gap-4 items-center">
-        <div className="flex flex-col items-center">
-          <h1 className="font-sans font-medium text-2xl">Smart Tools</h1>
-          <h1 className="font-sans font-medium text-2xl">
-            Real Experts, Easy Moves
-          </h1>
-        </div>
-        <p className="font-sans font-normal text-base text-[#4A5565]">
-          Your journey to finding the perfect home starts here
-        </p>
-      </div>
+    <div className="h-[590px] w-[1280px] flex flex-col gap-10 py-16 px-16 bg-white items-center">
+      <Header
+        head={["Smart Tools", "Real Experts, Easy Moves"]}
+        text={"Your journey to finding the perfect home starts here"}
+        tex={"text-[20px]"}
+        title={"text-[24px]"}
+      />
       <div className="flex gap-6 h-[234px] w-full">
         {firsts.map((item, index) => {
           return (
@@ -21,13 +18,11 @@ export const FirstSection = () => {
           );
         })}
       </div>
-      <div className="bg-[#FF6900] flex justify-center items-center rounded-lg text-white h-9 w-[140.34px]">
-        Get Started
-      </div>
+      <Butt key={1} text={text} />
     </div>
   );
 };
-
+const text = "Get Started";
 const firsts = [
   {
     img: "/Icon1.png",

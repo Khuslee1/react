@@ -1,18 +1,17 @@
 import { SecondComponent } from "@/_components/SecondComponent";
+import { Header } from "@/_components/Header";
 export const SecondSection = () => {
   return (
     <div className="bg-[#F9FAFB] w-screen h-[474px] flex flex-col gap-12 py-10 px-40">
       <div className="h-28 w-full flex flex-col gap-4 items-center">
-        <div className="flex flex-col items-center">
-          <h1 className="font-sans font-medium text-xl">
-            Buying Doesn't Have to
-          </h1>
-          <h1 className="font-sans font-medium text-xl">Be Overwhelming</h1>
-        </div>
-        <p className="font-sans font-normal text-base text-[#4A5565]">
-          Our streamlined process makes finding your dream home simple and
-          stress-free
-        </p>
+        <Header
+          head={["Buying Doesn't Have to", "Be Overwhelming"]}
+          text={
+            "Our streamlined process makes finding your dream home simple and stress-free"
+          }
+          tex={"text-[16px]"}
+          title={"text-[20px]"}
+        />
       </div>
       <div className="w-fill h-[246px] flex gap-8 flex-wrap flex-row justify-center">
         {second.map((item, i) => {

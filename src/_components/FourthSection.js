@@ -1,18 +1,18 @@
 import { Sold } from "@/_components/Sold";
+import { Butt } from "@/_components/Butt";
+import { Header } from "@/_components/Header";
 
 export const FourthSection = () => {
   return (
     <div className="w-full h-[686px] p-10 bg-[#F9FAFB] flex flex-col items-center gap-10 ">
-      <div className="h-28 w-full flex flex-col gap-4 items-center">
-        <div className="flex flex-col items-center">
-          <h1 className="font-sans font-medium text-xl">Meet the People</h1>
-          <h1 className="font-sans font-medium text-xl">Behind the Process</h1>
-        </div>
-        <p className="font-sans font-normal text-base text-[#4A5565]">
-          Our experienced team is dedicated to helping you find your perfect
-          home
-        </p>
-      </div>
+      <Header
+        head={["Meet the People", "Behind the Process"]}
+        text={
+          "Our experienced team is dedicated to helping you find your perfect home"
+        }
+        tex={"text-[16px]"}
+        title={"text-[20px]"}
+      />
       <div className="w-full h-390px flex gap-6 justify-center">
         {sold.map((item, index) => {
           return (
@@ -26,9 +26,7 @@ export const FourthSection = () => {
           );
         })}
       </div>
-      <div className="bg-[#FF6900] flex justify-center items-center rounded-lg text-white h-9 w-[161.73px] ">
-        Meet the team
-      </div>
+      <Butt text="Meet the Team" />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { ThirdComponent } from "@/_components/ThirdComponent";
-
+import { Butt } from "@/_components/Butt";
 export const ThirdSection = () => {
   return (
     <div className="w-screen h-[972px] flex flex-col gap-10 px-20 items-center">
@@ -8,15 +8,22 @@ export const ThirdSection = () => {
           Explore Properties
         </p>
         <div className="flex h-9 w-full justify-center gap-2">
-          <div className="py-2 px-6 text-sm font-sans rounded-full bg-[#FF6900] text-[white]">
-            House
-          </div>
-          <div className="py-2 px-6 text-sm font-sans rounded-full border border-[#0000001A]">
-            Villa
-          </div>
-          <div className="py-2 px-6 text-sm font-sans rounded-full border border-[#0000001A]">
-            Apartment
-          </div>
+          <Butt key={2} text={"House"} size={"text-[14px] rounded-full"} />
+
+          <Butt
+            key={3}
+            text={"Villa"}
+            size={
+              "text-[14px] rounded-full border border-[#0000001A] bg-white text-black"
+            }
+          />
+          <Butt
+            key={4}
+            text={"Apartment"}
+            size={
+              "text-[14px] rounded-full border border-[#0000001A] bg-white text-black"
+            }
+          />
         </div>
       </div>
       <div className="w-7xl h-[764px] flex flex-wrap gap-7 justify-center ">
@@ -36,9 +43,7 @@ export const ThirdSection = () => {
           );
         })}
       </div>
-      <div className="bg-[#FF6900] flex justify-center items-center rounded-lg text-white h-9 w-[188.88px] ">
-        Load More Listing
-      </div>
+      <Butt key={1} text="Load more Listing" />
     </div>
   );
 };
